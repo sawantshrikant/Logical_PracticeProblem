@@ -81,8 +81,18 @@ console.log(`The value after swaping first number b is : ${b}`)
 let d = 81;
 let e = 65;
 
-//using destructuring assignment
-[ d , e ] =  [ e , d];
+// //using destructuring assignment
+// [ d , e ] =  [ e , d];
+
+// console.log(`The value after swaping first number d is : ${d}`)
+// console.log(`The value after swaping first number e is : ${e}`)
+
+
+//Using Arithmetic Operators
+
+d = d + e ;
+e = d - e ;
+d = d - e ;
 
 console.log(`The value after swaping first number d is : ${d}`)
 console.log(`The value after swaping first number e is : ${e}`)
