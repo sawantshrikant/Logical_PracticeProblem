@@ -39,3 +39,23 @@ const number1 = 5;
 
 const result = Math.sqrt(number1);
 console.log(`The square root of ${number1} is : ${result}`);
+
+// find area of triangle
+
+const BaseValue = 5.2;
+const HeightOfTriangle = 7;
+
+const AreaOfTriangle = (BaseValue * HeightOfTriangle) / 2
+
+console.log(`The Area of Triangle is : ${AreaOfTriangle}`)
+
+//with 3 side
+
+const side1 = 5;
+const side2 = 10;
+const side3 = 12.5;
+
+const s = (side1 + side2 + side3) / 2;  //// calculate the semi-perimeter
+
+const area = Math.sqrt(s*(s-side1) * (s-side2) * (s-side3));
+console.log(`The area of triangle : ${area}`)
