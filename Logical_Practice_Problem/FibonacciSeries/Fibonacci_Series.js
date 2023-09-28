@@ -36,3 +36,17 @@ else {
     console.log(`The factorial of ${number1} is ${fact}.`);
     
 }
+
+//program to convert first letter of a string to uppercase
+
+const string = ("javascript")
+
+function CapatilizeFirstLet(str) {
+
+    const capatilize = str.charAt(0).toUpperCase() + str.slice(1);
+    return capatilize
+}
+
+const result = CapatilizeFirstLet(string);
+
+console.log(result);
