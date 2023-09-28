@@ -96,3 +96,8 @@ d = d - e ;
 
 console.log(`The value after swaping first number d is : ${d}`)
 console.log(`The value after swaping first number e is : ${e}`)
+
+
+
+
+
