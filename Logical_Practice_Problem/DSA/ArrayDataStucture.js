@@ -78,8 +78,7 @@ console.log(nameOfCom);
 nameOfCom.pop("kia")
 console.log(nameOfCom);
 
-//Iterating Over an Array:
-//You can use loops like for or for...of to iterate through the elements of an array.
+
 
 for (let i=0; i<nameOfCom.length; i++ ) {
     console.log(nameOfCom[i])
@@ -89,8 +88,7 @@ for(let nameOfCompany of nameOfCom ){
     console.log(nameOfCompany)
 }
 
-//Arrays are Heterogeneous:
-//In JavaScript, arrays can contain elements of different data types.
+
 
 let MixedArray = [1,"ramshankar", true, {nameOfStudent : "Samantha" }]
 
@@ -124,3 +122,197 @@ console.log(rest);
 //Common Array Methods:
 //JavaScript provides many built-in methods to manipulate arrays, 
 //including push, pop, shift, unshift, splice, concat, slice, indexOf, includes, map, filter, reduce, and many more. 
+
+
+//Use splice() to remove elements from arr, so that it only contains elements that sum to the value of 10.
+
+const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+
+arr.splice(1,4)
+console.log(arr);
+
+//We have defined a function, htmlColorNames, which takes an array of HTML colors as an argument.
+// Modify the function using splice() to remove the first two elements of the array and add 'DarkSalmon' and 'BlanchedAlmond' in their respective places.
+
+
+function htmlColorNames(arr) {
+arr.splice(0,2, 'DarkSalmon', 'BalanchedAlmond')
+    return arr;
+}
+
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+//We have defined a function, copyMachine which takes arr (an array) and num (a number) as arguments. 
+//The function is supposed to return a new array made up of num copies of arr.
+
+function copyMachine(arr,num){
+    let newArr =[]
+    while(num >=1){
+        newArr.push([...arr])
+
+       num-- 
+    }
+    return newArr
+}
+
+console.log(copyMachine([true,false,true],2))
+
+
+//We have defined a function spreadOut that returns the variable sentence. 
+//Modify the function using the spread operator so that it returns the array ['learning', 'to', 'code', 'is', 'fun'].
+
+
+function spreadOut(){
+    let fragment = ['to','code']
+    let sentence = ['learning',...fragment,'is','fun' ]
+
+    return sentence;
+}
+ console.log(spreadOut());
+
+
+//convert string into array
+
+const stringArr = "my name is shrikant sawant"
+
+const newArrconvert = stringArr.split(" ")
+
+console.log(newArrconvert)
+
+//now in this new array convert first carector of word into uppercase
+
+for(let i = 0; i <newArrconvert.length; i++) {
+    newArrconvert[i] = newArrconvert[i][0].toUpperCase() + newArrconvert[i].slice(1)
+}
+
+console.log(newArrconvert);
+
+// Convert Fahrenheit to Celsius
+
+function toCelsius(Fahrenheit){
+    return (5/9) * (Fahrenheit-32)
+
+}
+
+let value = toCelsius(77);
+console.log(value)
+
+// merge 2  array use concat
+const myGirls = ["aaaa", "bbbb"];
+const myBoys = ["cccc", "dddd", "eeeee"];
+
+const myChildren = myGirls.concat(myBoys);
+console.log(myChildren);
+
+
+const mySchool = ["ffff","gggg","hhhh","iiii"]
+
+
+const newMerge = myGirls.concat(myBoys,mySchool);
+
+console.log(newMerge);
+
+
+const points = [40, 100, 1, 5, 25, 10];
+
+
+console.log(points.sort());
+let alpha = (points.sort(function(a, b){return a - b}));
+
+console.log(alpha);
+
+console.log(`smallest number in array ${alpha[0]}`)
+console.log(`largest number in array ${alpha.length-1}`)
+
+
+let bestArr = [45,4,9,16,25]
+
+ bestArr.forEach(function(element) {
+    let squarevalue = element * element;
+    
+    console.log(`squared value is ${squarevalue}`)
+
+})
+;
+
+
+squaredValue = bestArr.map(function(element){
+    return element * element
+})
+
+console.log(squaredValue);
+
+
+let senstance = ["Hello ram" , "I am working on js", "I  love pizza"]
+
+let words = senstance.flatMap(function(senstance){
+    return senstance.split(' ')
+});
+
+console.log(words)
+
+
+//filter
+
+let players = [42,10,85,2,9,78]
+
+let evenNumber = players.filter(function(element){
+    return element % 2 === 0;
+})
+
+console.log(evenNumber);
+
+
+let PrimeNum = [5,8,7,15,63,75]
+
+
+
+
+function isPrime(num){
+    if (num <=1 ) return false;
+
+for(let i =2; i<= num /2; i++){
+    if(num % i === 0) {
+        return false;
+    }
+}
+  return true;
+}
+
+let primenumber = [];
+
+for (let i = 0; i <PrimeNum.length;i++) {
+    if(isPrime(PrimeNum[i])){
+        primenumber.push(PrimeNum[i])
+    }
+}
+
+console.log(primenumber)
+
+
+//reduce
+
+const redsum = [ 4,6,3,9,85,4,2]
+
+let sumOfNumbers = redsum.reduce(function(accumulator,current){
+    return accumulator + current
+},0)
+
+console.log(sumOfNumbers);
+
+
+//remove duplicate from array
+
+const dupliarray = [1,2,3,4,5,6,2,3,4,5]
+function removeduplicate(arr){
+      return arr.filter((element, index) => arr.indexOf(element) === index);
+}
+
+let uniqueelement = removeduplicate(dupliarray);
+
+console.log(uniqueelement);
+
+(function(name) {
+    console.log("Hello " +name+ " how are you ?")
+})("ravi");
