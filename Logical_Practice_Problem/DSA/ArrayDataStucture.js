@@ -126,7 +126,7 @@
 
 // //Use splice() to remove elements from arr, so that it only contains elements that sum to the value of 10.
 
-const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 
 // // arr.splice(1,4)
 // // console.log(arr);
@@ -168,30 +168,64 @@ const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 // //Modify the function using the spread operator so that it returns the array ['learning', 'to', 'code', 'is', 'fun'].
 
 
-// function spreadOut(){
-//     let fragment = ['to','code']
-//     let sentence = ['learning',...fragment,'is','fun' ]
+function spreadOut(){
+    let fragment = ['to','code']
+    let sentence = ['learning',...fragment,'is','fun' ]
 
-//     return sentence;
-// }
-//  console.log(spreadOut());
+    return sentence;
+}
+ console.log(spreadOut());
 
 
-// //convert string into array
+//convert string into array
 
-// const stringArr = "my name is shrikant sawant"
+const stringArr = "my name is shrikant sawant"
 
-// const newArrconvert = stringArr.split(" ")
+const newArrconvert = stringArr.split(" ")
 
-// console.log(newArrconvert)
+console.log(newArrconvert)
 
-// //now in this new array convert first carector of word into uppercase
+// console.log(newArrconvert[3]);
+
+// const third = newArrconvert.join(" ");
+// console.log(third);
+
+// const third = newArrconvert.toString();
+// console.log(third);
+
+
+
+//now in this new array convert first carector of word into uppercase
 
 // for(let i = 0; i <newArrconvert.length; i++) {
 //     newArrconvert[i] = newArrconvert[i][0].toUpperCase() + newArrconvert[i].slice(1)
 // }
 
 // console.log(newArrconvert);
+
+
+for(let i = 0; i <newArrconvert.length; i++) {
+    newArrconvert[i] = newArrconvert[i][newArrconvert[i].length-1].toUpperCase() + newArrconvert[i].slice()
+}
+
+console.log(newArrconvert);
+
+
+let  arr1 = [1,2,4,5,6];
+let arr2 = [5,6,9,3,4];
+let arr3 = [10,85,45,24]
+
+
+const a = arr1.concat(arr2,arr3);
+
+console.log(a);
+
+//function access n number of array how i get one single array
+
+
+
+
+
 
 // // Convert Fahrenheit to Celsius
 
@@ -274,26 +308,26 @@ const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 
 
 
-// function isPrime(num){
-//     if (num <=1 ) return false;
+// // function isPrime(num){
+// //     if (num <=1 ) return false;
 
-// for(let i =2; i<= num /2; i++){
-//     if(num % i === 0) {
-//         return false;
-//     }
-// }
-//   return true;
-// }
+// // for(let i =2; i<= num /2; i++){
+// //     if(num % i === 0) {
+// //         return false;
+// //     }
+// // }
+// //   return true;
+// // }
 
-// let primenumber = [];
+// // let primenumber = [];
 
-// for (let i = 0; i <PrimeNum.length;i++) {
-//     if(isPrime(PrimeNum[i])){
-//         primenumber.push(PrimeNum[i])
-//     }
-// }
+// // for (let i = 0; i <PrimeNum.length;i++) {
+// //     if(isPrime(PrimeNum[i])){
+// //         primenumber.push(PrimeNum[i])
+// //     }
+// // }
 
-// console.log(primenumber)
+// // console.log(primenumber)
 
 
 // //reduce
@@ -324,3 +358,71 @@ const arr = [2, 4, 5, 1, 7, 5, 2, 1];
 
 
 //practice logical 
+
+// const employee = [
+//     {
+//         Id : 1,
+//         name : "Ravishkumar",
+//         lastName: "sharma",
+//         salary : 5000
+//     },
+//     {
+//         Id : 2,
+//         name : "bhuvan",
+//         lastName: "thakur",
+//         salary : 7000
+//     }
+// ]
+
+// employee.forEach((Employee) => {
+//     console.log(Employee.Id)
+//     console.log(Employee.salary)
+
+// })
+
+
+const stringarr = "my name is shrikant sawant"
+
+const newArray = stringarr.split(" ")
+
+
+for (let i = 0; i < newArray.length; i++){
+
+const word = newArray[i];
+
+newArray[i] = word.slice(0,-1) + word[word.length - 1].toUpperCase();
+}
+
+console.log(newArray);
+
+
+//function access n number of array how i get one single array
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const array3 = [7, 8, 9];
+
+const combinedArray = [...array1, ...array2, ...array3];
+
+console.log(combinedArray);
+
+
+//
+
+function mergeArray(...array){
+    const combineArray2 = [].concat(...array)
+
+    const uniqueArray = [...new Set(combineArray2)]
+
+    return  uniqueArray
+}
+
+
+const arr11 = [1,2,3,4,55,4]
+const arr12 = [23,56,8,9,6]
+const arr13 = [12,36,85,74,6]
+
+
+const combinedArray1 = mergeArray(arr11,arr12,arr13)
+
+console.log(combinedArray1);

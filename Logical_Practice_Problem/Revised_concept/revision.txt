@@ -1,0 +1,18 @@
+JavaScript is a lightweight programming language commonly used by web developers to add dynamic interactions to web pages, applications, servers, and even games.
+
+It works seamlessly alongside HTML and CSS, complementing CSS in formatting HTML elements while providing user interaction, a capability that CSS alone lacks.
+
+JavaScript’s widespread applications in web, mobile app, and game development make it a valuable language to learn.
+Internal JavaScript uses the <script> tag within the body of the HTML script to encapsulate all the JavaScript code. 
+
+
+Fixed values are called Literals.
+Variable values are called Variables.
+
+javaScript uses the keywords var, let and const to declare variables.
+
+Let Hoisting
+
+
+A closure is formed when a function is defined within another function and has access to the outer function's variables.
+ This inner function "closes over" the variables it uses, which means it retains access to those variables even after the outer function has finished executing
