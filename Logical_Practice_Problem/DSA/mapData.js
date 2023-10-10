@@ -1,52 +1,52 @@
 // //The map data structure, also known as a dictionary, is used to store a collection of key-value pairs. 
 // //It is an essential data structure in computer science because it allows for efficient and fast lookups, inserts, and deletes.
 
-// //Creating a Map
-// const myMap = new Map();
+ //Creating a Map
+ const myMap = new Map();
 
-// //Adding Key-Value Pairs
-// //add key-value pairs to a Map using the set(key, value) method
+//Adding Key-Value Pairs
+ //add key-value pairs to a Map using the set(key, value) method
 
-// myMap.set("name", "John");
-// myMap.set("age", 30);
+ myMap.set("name", "John");
+ myMap.set("age", 30);
 
-// //Getting Values by Key
-// // retrieve values from a Map using the get(key) method:
+ //Getting Values by Key
+ // retrieve values from a Map using the get(key) method:
 
-// const name1 = myMap.get("name");
-// console.log(name1); 
+ const name1 = myMap.get("name");
+ console.log(name1); 
 
 
-// //checking for Key Existence
-// //check if a key exists in a Map using the has(key) method
+ //checking for Key Existence
+ //check if a key exists in a Map using the has(key) method
 
-// if (myMap.has("name")) {
-//     console.log("The 'name' key exists in the map.");
-//   } else {
-//     console.log("The 'name' key does not exist in the map.");
-//   }
+ if (myMap.has("name")) {
+     console.log("The 'name' key exists in the map.");
+   } else {
+     console.log("The 'name' key does not exist in the map.");
+   }
 
 // //Deleting Key-Value Pairs
 // // remove a key-value pair from a Map using the delete(key) method
 
-// myMap.delete("age");
+ myMap.delete("age");
 
 // // iterate over all key-value pairs in a Map using the forEach() method
 
-// myMap.forEach((value, key) => {
-//     console.log(`${key}: ${value}`);
-//   });
+myMap.forEach((value, key) => {
+    console.log(`${key}: ${value}`);
+  });
 
 // //Size of the Map
 // // get the number of key-value pairs in a Map using the size property
 
-// const size = myMap.size;
-// console.log(`The size of the map is ${size}`);
+const size = myMap.size;
+console.log(`The size of the map is ${size}`);
 
 // //Clearing the Map:
 // //You can remove all key-value pairs from a Map using the clear() method
 
-// myMap.clear();
+myMap.clear();
 
 
 //A Map holds key-value pairs where the keys can be any datatype.
@@ -104,4 +104,7 @@ console.log(studentClass instanceof Map);
 
 
 
+
+//Map.forEach()
+//The forEach() method invokes a callback for each key/value pair in a Map
 

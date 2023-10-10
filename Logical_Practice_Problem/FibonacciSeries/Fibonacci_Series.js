@@ -51,6 +51,4 @@ const result = CapatilizeFirstLet(string);
 
 console.log(result);
 
-//
 
-const enterName = parseInt(prompt('Enter a first Name: '));
